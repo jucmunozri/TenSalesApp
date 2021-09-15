@@ -5,7 +5,7 @@ TenSalesApp es una aplicacion software creada por TenJS que permite controlar la
 
  - **Carolina Garzón :**
  - **Juan Garzón:**
- - **Julio Muñoz:**
+ - **Julio Muñoz:** Estudiante de Tecnolgía en Desarrollo de Software, enamorado de mi carrera y futura profesión. 
  - **Juan Ruiz:** Profesor Universitario de idiomas, entusiasta del TechEd y los rompecabezas.
  - **Yirlan Solano:** Estudiante de ingeniería mecatrónica, apasionado por la tecnología y la programación. 
 
