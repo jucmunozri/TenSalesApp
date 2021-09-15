@@ -36,7 +36,7 @@ Juan Manuel Garzón |
 
 
 Juan Carlos Ruiz Carrillo | 
-    Github:juancarlosruizcarrillo
+    Github:https://github.com/juancarlosruizcarrillo
     EMAIL: juanalgostudio@gmail.com
 
-    Text here...
+    Profesor Universitario de idiomas, entusiasta del TechEd y los rompecabezas.
