@@ -22,10 +22,10 @@ Yirlan Andrey Solano Sandoval |
 
 
 Julio César Muñoz Rios | 
-    Github:
+    Github: https://github.com/jucmunozri
     EMAIL: jucmunozri@gmail.com
 
-    Text here...
+    Estudiante de Tecnolgía en Desarrollo de Software, enamorado de mi carrera y futura profesión
 
 
 Juan Manuel Garzón | 
