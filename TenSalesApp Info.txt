@@ -1,11 +1,11 @@
-¿Qué es TenSalesApp?
+¿Qué es TenSalesApp?🛠️
 
 TenSalesApp es una aplicación software creada por TenJS que permite controlar las ventas físicas
 y virtuales de una empresa de manufactura a la que le hace el correspondiente seguimiento.
 Este proyecto se crea en el marco del Programa MisionTic 2022 en la UDEA (Universidad de Antioquia).
 
 
-¿Quienes conforman TenJS?
+¿Quienes conforman TenJS?✒️
 
 Carolina del Pilar Garzón Hernández | 
     Github: https://github.com/cariitogarzon
@@ -42,7 +42,7 @@ Juan Carlos Ruiz Carrillo |
     Profesor Universitario de idiomas, entusiasta del TechEd y los rompecabezas.
 
 
-Asignación de roles:
+Asignación de roles:📌
 
 Cada sprint, uno de los integrantes tendrá un rol diferente, para que todos puedan aportar de diversas maneras al desarrollo del equipo y la aplicación. 
 
