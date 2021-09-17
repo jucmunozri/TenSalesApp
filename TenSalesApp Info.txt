@@ -40,3 +40,18 @@ Juan Carlos Ruiz Carrillo |
     EMAIL: juanalgostudio@gmail.com
 
     Profesor Universitario de idiomas, entusiasta del TechEd y los rompecabezas.
+
+
+Asignación de roles:
+
+Cada sprint, uno de los integrantes tendrá un rol diferente, para que todos puedan aportar de diversas maneras al desarrollo del equipo y la aplicación. 
+
+- Sprint 1:
+
+Desarrollador: Andrey Solano
+Analista: Juan Manuel Garzon
+Product Owner: Juan Carlos Ruiz
+Administrador de BD: Julio Cesar Muñoz
+Scrum Master: Carolina Garzon
+
+
