@@ -85,7 +85,7 @@ body {
     }
 }
 
-.login #logo10 {
+.login #logoApp {
     width: 50%;
     height: auto;
     /* margin: 10px; */
@@ -94,9 +94,37 @@ body {
     margin-bottom: 25px;
 }
 
-.logo11 {
+.logo10js {
     width: 70px;
     height: auto;
     margin: 10px auto;
     display: block;
+}
+
+
+/* unvisited link */
+
+a:link {
+    color: rgb(255, 255, 255);
+}
+
+
+/* visited link */
+
+a:visited {
+    color: rgb(7, 195, 7);
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: rgb(222, 226, 13);
+}
+
+
+/* selected link */
+
+a:active {
+    color: rgb(241, 113, 8);
 }
