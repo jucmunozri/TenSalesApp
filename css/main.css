@@ -128,3 +128,17 @@ a:hover {
 a:active {
     color: rgb(241, 113, 8);
 }
+
+.right {
+    text-align: right;
+    float: right;
+    margin-bottom: 10px;
+}
+
+.message {
+    color: rgb(240, 235, 167);
+    font-size: 10px;
+    margin-bottom: 15px;
+    text-align: justify;
+    text-justify: inter-word;
+}
