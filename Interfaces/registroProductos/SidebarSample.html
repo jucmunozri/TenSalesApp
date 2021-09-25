@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- Inspirado en CodingLab y VidaMRR
+CodingLab -> https://www.youtube.com/watch?v=ES8vJcUqE7s
+Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styleDropBar.css" />
+    <!-- Boxiocns CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <img src="images/TenSalesAppLogo.png" alt="Logo" />
+            <span class="logo_name">TenSalesApp</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="bx bxs-business"></i>
+                        <span class="link_name">Administración</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Administración</a></li>
+                    <button id="botonInterfaz">Show/hide div Interfaz</button>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Vendedores</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="bx bx-shopping-bag"></i>
+                        <span class="link_name">Ventas</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Ventas</a></li>
+                    <li><a href="#">Nueva Venta</a></li>
+                    <li><a href="#">Listado de Ventas</a></li>
+                    <li><a href="#">Estado de Ventas</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="bx bx-lock-alt"></i>
+                        <span class="link_name">Seguridad</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Seguridad</a></li>
+                    <li><a href="#">Roles</a></li>
+                    <li><a href="#">Usuarios</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="link_name">Configuración</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Configuración</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="images/fotoperfil.png" alt="profileImg" />
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Guts</div>
+                        <div class="job">Administrador</div>
+                    </div>
+                    <i class="bx bx-log-out"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class="bx bx-menu"></i>
+
+            <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗ -->
+            <!-- ║  ║ ║ ║║║╣   ╚═╗ ║ ╠═╣╠╦╝ ║ ╚═╗ -->
+            <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝ -->
+
+
+            <div id="divInterfaz">This is the interface div sample.
+
+
+            </div>
+
+            <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
+            <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
+            <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
+
+            <div class="footer">
+                <img src="./images/logoTenJS.png" alt="Logo TenJS" />
+                <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗ -->
+    <!-- ║  ║ ║ ║║║╣   ╚═╗ ║ ╠═╣╠╦╝ ║ ╚═╗ -->
+    <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝ -->
+
+    <script>
+        const targetDiv = document.getElementById("divInterfaz");
+        const btn = document.getElementById("botonInterfaz");
+        btn.onclick = function() {
+            if (targetDiv.style.display !== "none") {
+                targetDiv.style.display = "none";
+            } else {
+                targetDiv.style.display = "block";
+            }
+        };
+    </script>
+
+    <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
+    <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
+    <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
+
+
+
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+
+</html>
