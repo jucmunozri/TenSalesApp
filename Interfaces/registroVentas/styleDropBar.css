@@ -321,11 +321,75 @@
 #divInterfaz {
     width: 93%;
     height: 80%;
-    background-color: #0ca6ac;
+    background-color: #f6f6f6;
     position: absolute;
     left: 7vh;
     top: 8vh;
     display: block;
+}
+
+button {
+    width: auto;
+    padding: 4px;
+    background-color: #040736;
+    color: #fff;
+    box-shadow: 0 0 3px 0 #0ca6ac;
+    cursor: pointer;
+    margin-right: 3%;
+    border-radius: 5px;
+}
+
+input {
+    margin-right: 2%;
+}
+
+form {
+    position: relative;
+}
+
+table {
+    width: 95%;
+    height: 100%;
+    position: relative;
+    margin: 2%;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    position: relative;
+    align-self: center;
+}
+
+th {
+    background-color: #040736;
+    color: #fff;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+tr:nth-child(even) {
+    background-color: #64aaa9;
+}
+
+tr:nth-child(odd) {
+    background-color: #98b37a;
+}
+
+@media (max-width: 780px) {
+    .home-section .home-content .footer {
+        display: none;
+    }
 }
 
 
