@@ -29,7 +29,8 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Administración</a></li>
-                    <li><a href="#">Clientes</a></li>
+                    <li><a class="but" type="button" id="addplayer">Clientes</a></li>
+                    <button id="botonInterfaz">Show/hide div Interfaz</button>
                     <li><a href="#">Productos</a></li>
                     <li><a href="#">Vendedores</a></li>
                 </ul>
@@ -44,7 +45,7 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Ventas</a></li>
-                    <li><a href="#">Nueva Venta</a></li>
+                    <li><a href="./Interfaces/registroVentas/SidebarSample.html">Nueva Venta</a></li>
                     <li><a href="#">Listado de Ventas</a></li>
                     <li><a href="#">Estado de Ventas</a></li>
                 </ul>
@@ -82,7 +83,7 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                         <div class="profile_name">Guts</div>
                         <div class="job">Administrador</div>
                     </div>
-                    <i class="bx bx-log-out"></i>
+                    <a href="../../login.html"><i class="bx bx-log-out"></i></a>
                 </div>
             </li>
         </ul>
@@ -90,12 +91,53 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
     <section class="home-section">
         <div class="home-content">
             <i class="bx bx-menu"></i>
+            <!-- <br>
+            <br> -->
+
+            <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗ -->
+            <!-- ║  ║ ║ ║║║╣   ╚═╗ ║ ╠═╣╠╦╝ ║ ╚═╗ -->
+            <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝ -->
+
+
+            <div id="divInterfaz">This is the interface div sample.
+
+
+            </div>
+
+            <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
+            <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
+            <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
+
+
+
+
             <div class="footer">
                 <img src="./images/logoTenJS.png" alt="Logo TenJS" />
                 <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
             </div>
         </div>
     </section>
+
+    <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗ -->
+    <!-- ║  ║ ║ ║║║╣   ╚═╗ ║ ╠═╣╠╦╝ ║ ╚═╗ -->
+    <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝ -->
+
+    <script>
+        const targetDiv = document.getElementById("divInterfaz");
+        const btn = document.getElementById("botonInterfaz");
+        btn.onclick = function() {
+            if (targetDiv.style.display !== "none") {
+                targetDiv.style.display = "none";
+            } else {
+                targetDiv.style.display = "block";
+            }
+        };
+    </script>
+
+    <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
+    <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
+    <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
+
 
     <script>
         let arrow = document.querySelectorAll(".arrow");
