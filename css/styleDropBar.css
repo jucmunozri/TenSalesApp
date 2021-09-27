@@ -311,3 +311,37 @@
     margin: 10px auto;
     display: block;
 }
+
+
+/* <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗ --> */
+
+
+/* <!-- ║  ║ ║ ║║║╣   ╚═╗ ║ ╠═╣╠╦╝ ║ ╚═╗ --> */
+
+
+/* <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝ --> */
+
+#divInterfaz {
+    width: 93%;
+    height: 80%;
+    background-color: #0ca6ac;
+    position: absolute;
+    left: 7vh;
+    top: 8vh;
+    display: block;
+}
+
+@media (max-width: 780px) {
+    .home-section .home-content .footer {
+        display: none;
+    }
+}
+
+
+/* <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ --> */
+
+
+/* <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ --> */
+
+
+/* <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ --> */
