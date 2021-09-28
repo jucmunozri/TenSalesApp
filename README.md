@@ -1,3 +1,7 @@
+<p align="center" width="100%">
+    <img width="33%" src="https://user-images.githubusercontent.com/84425809/135009080-548106e4-02a0-47a4-8dde-2e93723f7936.png">
+</p>
+
 # TenSalesApp🛠️
 TenSalesApp es una aplicacion software creada por TenJS que permite controlar las ventas físicas y virtuales de una empresa de manufactura a la que le hace el correspondiente seguimiento. Este proyecto se crea en el marco del Programa MisionTic 2022 en la UDEA (Universidad de Antioquia). Los lenguajes básicos a utilizar son Javascript, HTML5, CSS3, MySQL (hasta el momento). 
 
