@@ -10,6 +10,7 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
     <!-- Boxiocns CDN Link -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Ventas</title>
 </head>
 
 <body>
@@ -97,73 +98,86 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
             <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝ -->
 
 
-            <div id="divInterfaz">This is GESTIÓN DE VENTAS interface.
+            <div id="divInterfaz">
+                <!-- This is GESTIÓN DE VENTAS interface. -->
                 <div class="container">
-                    <h2 ALIGN="center">Buscar Venta</h2>
-                    <br>
-                    <br>
-                    <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()">
-                        <label for="idVenta">ID Venta: </label>
-                        <input type="text" name="idVenta" id="idVenta" value="001">
-                        <br><br>
-                        <label for="fechaVenta">Fecha de Venta: </label>
-                        <input type="date" name="fechaVentaNuevaVenta" id="fechaVenta">
-                        <br><br>
-                        <label for="vendedor">Vendedor: </label>
-                        <select name="vendedor" id="vendedor" onClick="getVendedorName" size="1">
-                            <option value="vendedor1">Vendedor 1</option>
-                            <option value="vendedor2">Vendedor 2</option>
-                            <option value="vendedor3">Vendedor 3</option>
-                        </select>
+                    <div id="titulo">
+                        <h2 ALIGN="center">Buscar Venta</h2>
+                    </div>
 
-                        <br><br>
-                        <!-- <hr> -->
-                        <aside>
-                            <table style="width:95%">
-                                <tr>
-                                    <th>ID Venta</th>
-                                    <th>Vendedor</th>
-                                    <th>Precio Total</th>
-                                    <th>Pago Recibido</th>
-                                    <th>Estado</th>
-                                </tr>
-                                <tr>
-                                    <td>ID Venta</td>
-                                    <td>Vendedor</td>
-                                    <td>Precio Total</td>
-                                    <td>Pago Recibido</td>
-                                    <td>Estado</td>
-                                </tr>
-                                <tr>
-                                    <td>ID Venta</td>
-                                    <td>Vendedor</td>
-                                    <td>Precio Total</td>
-                                    <td>Pago Recibido</td>
-                                    <td>Estado</td>
-                                </tr>
-                                <tr>
-                                    <td>ID Venta</td>
-                                    <td>Vendedor</td>
-                                    <td>Precio Total</td>
-                                    <td>Pago Recibido</td>
-                                    <td>Estado</td>
-                                </tr>
-                            </table>
-                        </aside>
-                        <!-- <button type="reset" id="boton-vaciar" class="btn btn-danger">Vaciar Formulario</button> -->
-                        <button type="submit" id="botonEditarVenta" class="btn btn-danger" value="Submit" onsubmit=editarVenta()> Editar Venta</button>
+                    <div>
+                        <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()">
+                            <label for="idVenta">ID Venta: </label>
+                            <input type="text" name="idVenta" id="idVenta" value="001">
+    
+                            <label for="fechaVenta">Fecha de Venta: </label>
+                            <input type="date" name="fechaVentaNuevaVenta" id="fechaVenta">
+    
+                            <label for="vendedor">Vendedor: </label>
+                            <select name="vendedor" id="vendedor" onClick="getVendedorName" size="1">
+                                <option value="vendedor1">Vendedor 1</option>
+                                <option value="vendedor2">Vendedor 2</option>
+                                <option value="vendedor3">Vendedor 3</option>
+                            </select>
+                            <br><br>
+                            <aside ALIGN="center">
+                                <button type="button" onclick="buscarVenta()">🔍 Buscar Venta</button>
+                                <button type="button" onclick="listarVenta()">🔍 Listar Ventas</button>
+                            </aside>
+                        </form>
+                    </div>
 
+                    <br><br>
+                    <!-- <hr> -->
+                    
+                    <aside>
+                        <table style="width:95%">
+                            <tr>
+                                <th>ID Venta</th>
+                                <th>Vendedor</th>
+                                <th>Precio Total</th>
+                                <th>Pago Recibido</th>
+                                <th>Estado</th>
+                            </tr>
+                            <tr>
+                                <td>ID Venta</td>
+                                <td>Vendedor</td>
+                                <td>Precio Total</td>
+                                <td>Pago Recibido</td>
+                                <td>Estado</td>
+                            </tr>
+                            <tr>
+                                <td>ID Venta</td>
+                                <td>Vendedor</td>
+                                <td>Precio Total</td>
+                                <td>Pago Recibido</td>
+                                <td>Estado</td>
+                            </tr>
+                            <tr>
+                                <td>ID Venta</td>
+                                <td>Vendedor</td>
+                                <td>Precio Total</td>
+                                <td>Pago Recibido</td>
+                                <td>Estado</td>
+                            </tr>
+                        </table>
+                    </aside>
+
+                    <!-- <button type="reset" id="boton-vaciar" class="btn btn-danger">Vaciar Formulario</button> -->
+                    <button type="submit" id="botonEditarVenta" class="btn btn-danger" value="Submit"
+                        onsubmit=editarVenta()>Editar Venta</button>
+
+                </div>
+
+                <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
+                <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
+                <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
+
+                <div class="footer">
+                    <img src="./images/logoTenJS.png" alt="Logo TenJS" />
+                    <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
+                </div>
             </div>
-
-            <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
-            <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
-            <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
-
-            <div class="footer">
-                <img src="./images/logoTenJS.png" alt="Logo TenJS" />
-                <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
-            </div>
-        </div>
     </section>
 
     <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗ -->
@@ -200,7 +214,7 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
         sidebarBtn.addEventListener("click", () => {
             sidebar.classList.toggle("close");
         });
-    </script> 
+    </script>
 </body>
 
 </html>
