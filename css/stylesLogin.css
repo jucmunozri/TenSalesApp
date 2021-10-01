@@ -121,6 +121,8 @@ body {
     cursor: pointer;
     margin-bottom: 15px;
     border-radius: 5px;
+    position:relative;
+    left: 37%;
 }
 
 @media only screen and (max-width: 540px) {

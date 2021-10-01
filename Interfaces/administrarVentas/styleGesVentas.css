@@ -328,6 +328,11 @@
     display: block;
 }
 
+.container{
+    display: block;
+    padding: 5%;
+}
+
 button {
     width: auto;
     padding: 4px;
@@ -336,7 +341,12 @@ button {
     box-shadow: 0 0 3px 0 #0ca6ac;
     cursor: pointer;
     margin-right: 3%;
+    margin-top: 2%;
     border-radius: 5px;
+}
+
+#titulo{
+    margin-bottom: 20px;
 }
 
 input {
@@ -345,6 +355,8 @@ input {
 
 form {
     position: relative;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 table {
@@ -391,6 +403,11 @@ tr:nth-child(odd) {
         display: none;
     }
 }
+
+#botonEditarVenta{
+    
+}
+
 
 
 /*
