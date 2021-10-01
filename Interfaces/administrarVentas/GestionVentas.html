@@ -32,8 +32,8 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                     <li><a class="link_name" href="#">Productos</a></li>
                     <!-- <button id="botonInterfaz">Show/hide div Interfaz</button> -->
                     <!-- <li><a href="#">Clientes</a></li> -->
-                    <li><a href="#">Agregar Productos</a></li>
-                    <li><a href="#">Gestión de Productos</a></li>
+                    <li><a href="../registroProductos/RegistroProductos.html">Agregar Productos</a></li>
+                    <li><a href="../administrarProductos/GestionProductos.html">Gestión de Productos</a></li>
                 </ul>
             </li>
             <li>
@@ -46,8 +46,8 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Ventas</a></li>
-                    <li><a href="#">Nueva Venta</a></li>
-                    <li><a href="#">Gestión de Ventas</a></li>
+                    <li><a href="../registroVentas/RegistroVentas.html">Nueva Venta</a></li>
+                    <li><a href="../administrarVentas/GestionVentas.html">Gestión de Ventas</a></li>
                     <!-- <li><a href="#">Estado de Ventas</a></li> -->
                 </ul>
             </li>
@@ -109,10 +109,10 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                         <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()">
                             <label for="idVenta">ID Venta: </label>
                             <input type="text" name="idVenta" id="idVenta" value="001">
-    
+
                             <label for="fechaVenta">Fecha de Venta: </label>
                             <input type="date" name="fechaVentaNuevaVenta" id="fechaVenta">
-    
+
                             <label for="vendedor">Vendedor: </label>
                             <select name="vendedor" id="vendedor" onClick="getVendedorName" size="1">
                                 <option value="vendedor1">Vendedor 1</option>
@@ -129,7 +129,7 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
 
                     <br><br>
                     <!-- <hr> -->
-                    
+
                     <aside>
                         <table style="width:95%">
                             <tr>
@@ -164,8 +164,7 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                     </aside>
 
                     <!-- <button type="reset" id="boton-vaciar" class="btn btn-danger">Vaciar Formulario</button> -->
-                    <button type="submit" id="botonEditarVenta" class="btn btn-danger" value="Submit"
-                        onsubmit=editarVenta()>Editar Venta</button>
+                    <button type="submit" id="botonEditarVenta" class="btn btn-danger" value="Submit" onsubmit=editarVenta()>Editar Venta</button>
 
                 </div>
 
