@@ -6,11 +6,11 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./styleGesVentas.css" />
+    <link rel="stylesheet" href="./styleGesUsuarios.css" />
     <!-- Boxiocns CDN Link -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestión de Ventas</title>
+    <title>Gestión de Usuarios</title>
 </head>
 
 <body>
@@ -99,29 +99,29 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
 
 
             <div id="divInterfaz">
-                <!-- This is GESTIÓN DE VENTAS interface. -->
+                <!-- This is GESTIÓN DE Usuarios interface. -->
                 <div class="container">
                     <div id="titulo">
-                        <h2 ALIGN="center">Buscar Venta</h2>
+                        <h2 ALIGN="center">Buscar Usuario</h2>
                     </div>
 
                     <div>
                         <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()">
-                            <label for="idVenta">ID Venta: </label>
-                            <input type="text" name="idVenta" id="idVenta" value="001">
+                            <label for="idVenta">ID Usuario: </label>
+                            <input type="text" name="idUsuario" id="idUsuario" value="001">
 
-                            <label for="fechaVenta">Fecha de Venta: </label>
-                            <input type="date" name="fechaVentaNuevaVenta" id="fechaVenta">
+                            <label for="nombreUsuario">Nombre: </label>
+                            <input type="text" name="nombreUsuario" id="nombreUsuario" value="Nombre">
 
-                            <label for="vendedor">Vendedor: </label>
-                            <select name="vendedor" id="vendedor" onClick="getVendedorName" size="1">
-                                <option value="vendedor1">Vendedor 1</option>
-                                <option value="vendedor2">Vendedor 2</option>
-                                <option value="vendedor3">Vendedor 3</option>
+                            <label for="estadoU">Estado de Usuario: </label>
+                            <select name="estadoU" id="estadoU" onClick="getEstado" size="1">
+                                <option value="pendiente">Pendiente</option>
+                                <option value="autorizado">Autorizado</option>
+                                <option value="noautorizado">No Autorizado</option>
                             </select>
                             <br><br>
                             <aside ALIGN="center">
-                                <button type="button" onclick="buscarVenta()">🔍 Buscar Venta</button>
+                                <button type="button" onclick="buscarUsuario()">🔍 Buscar Usuario</button>
                             </aside>
                         </form>
                     </div>
@@ -132,38 +132,40 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                     <aside>
                         <table style="width:95%">
                             <tr>
-                                <th>ID Venta</th>
-                                <th>Vendedor</th>
-                                <th>Precio Total</th>
-                                <th>Pago Recibido</th>
+                                <th>ID Usuario</th>
+                                <th>Nombre de Usuario</th>
                                 <th>Estado</th>
+                                <th>Rol</th>
+                                <th>Permisos</th>
                             </tr>
                             <tr>
-                                <td>ID Venta</td>
-                                <td>Vendedor</td>
-                                <td>Precio Total</td>
-                                <td>Pago Recibido</td>
+                                <td>ID Usuario</td>
+                                <td>Nombre de Usuario</td>
                                 <td>Estado</td>
+                                <td>Rol</td>
+                                <td>Permisos</td>
                             </tr>
                             <tr>
-                                <td>ID Venta</td>
-                                <td>Vendedor</td>
-                                <td>Precio Total</td>
-                                <td>Pago Recibido</td>
+                                <td>ID Usuario</td>
+                                <td>Nombre de Usuario</td>
                                 <td>Estado</td>
+                                <td>Rol</td>
+                                <td>Permisos</td>
                             </tr>
                             <tr>
-                                <td>ID Venta</td>
-                                <td>Vendedor</td>
-                                <td>Precio Total</td>
-                                <td>Pago Recibido</td>
+                                <td>ID Usuario</td>
+                                <td>Nombre de Usuario</td>
                                 <td>Estado</td>
+                                <td>Rol</td>
+                                <td>Permisos</td>
                             </tr>
                         </table>
                     </aside>
 
                     <!-- <button type="reset" id="boton-vaciar" class="btn btn-danger">Vaciar Formulario</button> -->
-                    <button type="submit" id="botonEditarVenta" class="btn btn-danger" value="Submit" onsubmit=editarVenta()>Editar Venta</button>
+                    <div class=boton ALIGN="center">
+                        <button type="submit" id="botonEditarUsuario" class="btn btn-danger" value="Submit" onsubmit=editarUsuario()>Editar Usuario</button>
+                    </div>
 
                 </div>
 
