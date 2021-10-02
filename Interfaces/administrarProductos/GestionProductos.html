@@ -111,13 +111,12 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                         </form>
                     </div>
                     <div>
-                        <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()" >
-                            <label for="estadoU">Filtrar por Estado: </label>
-                            <select name="estadoU" id="estadoU" onClick="getEstado" size="1">
-                                <option value="pendiente">Disponible</option>
-                                <option value="autorizado">No Disponible</option>
+                            <label>Filtrar por Estado: </label>
+                            <select id="estadoProducto" oninput="filterTable()">
+                                <option>All</option>
+                                <option>Disponible</option>
+                                <option>No Disponible</option>
                             </select>
-                        </form>
                     </div>
 
 
@@ -276,12 +275,29 @@ function tableSearch2() {
         }
 
     }
+
+    function filterTable() {    
+        let dropdown, table, tr, td, estadoFiltro, filter;
+        dropdown = document.getElementById("estadoProducto");
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        filter = dropdown.value;
+
+        for (let i = 0; i < tr.length; i++) { 
+            td = tr[i].getElementsByTagName("td");
+            estadoFiltro = td[2] || null; 
+
+            if (filter === "All" || !estadoFiltro || (filter === estadoFiltro.textContent)) {
+                tr[i].style.display = "";
+            }
+            else {
+                tr[i].style.display = "none"; 
+            }
+         }
+    }
     
 </script>
 
-<script type="application/javascript">
-    
-</script>
 </body>
 
 </html>
