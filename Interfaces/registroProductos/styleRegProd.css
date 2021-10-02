@@ -325,17 +325,13 @@
     position: absolute;
     left: 7vh;
     top: 8vh;
-    display: flex;
-}
-.p-2{
-   display: flex;
-   flex-wrap: wrap;
+    display: block;
 }
 
-.btn-ttc {
+button {
     width: auto;
     padding: 4px;
-    background-color: #040735;
+    background-color: #040736;
     color: #fff;
     box-shadow: 0 0 3px 0 #0ca6ac;
     cursor: pointer;
@@ -351,9 +347,11 @@ form {
     position: relative;
 }
 
-.table {
-   display: flex;
-   justify-content: center;
+table {
+    width: 95%;
+    height: 100%;
+    position: relative;
+    margin: 2%;
 }
 
 table,
