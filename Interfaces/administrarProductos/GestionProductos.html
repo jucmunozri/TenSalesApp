@@ -109,16 +109,13 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                             <label for="Precio">Precio: </label>
                             <input type="text" name="Precio" id="precio" onkeyup='tableSearch2()'>
 
-                            <label for="estadoP">Estado: </label>
-                            <select name="estadoP" id="estadoP" onClick="getEstado" size="1">
-                                <option value="disponible">Disponible</option>
-                                <option value="noDisponible">No Disponible</option>
+                            <label for="estadoProducto">Estado: </label>
+                            <select id="estadoProducto" oninput="filterTable()">
+                                <option>Todos</option>
+                                <option>Disponible</option>
+                                <option>No Disponible</option>
                             </select>
                     </div>
-
-                    <aside ALIGN="center">
-                        <button type="button" onclick="buscarProducto()">🔍 Buscar Poducto</button>
-                    </aside>
 
                     <br><br>
 
