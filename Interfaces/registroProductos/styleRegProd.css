@@ -321,11 +321,16 @@
 #divInterfaz {
     width: 93%;
     height: 80%;
-    background-color: #f6f6f6;
+    background-color: #E4E9F7;
     position: absolute;
     left: 7vh;
     top: 8vh;
     display: block;
+}
+
+.container{
+    display: block;
+    padding: 5%;
 }
 
 button {
@@ -339,12 +344,18 @@ button {
     border-radius: 5px;
 }
 
+#titulo{
+    margin-bottom: 20px;
+}
+
 input {
     margin-right: 2%;
 }
 
 form {
     position: relative;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 table {

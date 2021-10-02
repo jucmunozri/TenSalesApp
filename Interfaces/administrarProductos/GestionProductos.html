@@ -100,86 +100,90 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
 
                     <div>
                         <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()">
-                            <label for="Idproducto">🔍 ID Producto: </label>
+                            <label for="Idproducto">ID Producto: </label>
                             <input type="text" name="Idproducto" id="Idproducto" onkeyup='tableSearch()'>
 
-                            <label for="Descripción"> 🔍 Descripción: </label>
+                            <label for="Descripción">Descripción: </label>
                             <input type="text" name="Descripción" id="descripcion" onkeyup='tableSearch1()'>
 
-                            <label for="Precio"> 🔍 Precio: </label>
+                            <label for="Precio">Precio: </label>
                             <input type="text" name="Precio" id="precio" onkeyup='tableSearch2()'>
-                        </form>
-                    </div>
-                    <div>
-                        <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()" >
-                            <label for="estadoU">Filtrar por Estado: </label>
-                            <select name="estadoU" id="estadoU" onClick="getEstado" size="1">
-                                <option value="pendiente">Disponible</option>
-                                <option value="autorizado">No Disponible</option>
+
+                            <label for="estadoP">Estado: </label>
+                            <select name="estadoP" id="estadoP" onClick="getEstado" size="1">
+                                <option value="disponible">Disponible</option>
+                                <option value="noDisponible">No Disponible</option>
                             </select>
                         </form>
                     </div>
 
+                    <aside ALIGN="center">
+                        <button type="button" onclick="buscarProducto()">🔍 Buscar Poducto</button>
+                    </aside>
+
+                    <br><br>
 
                     <aside>
-                        <table id="myTable" style="width:95%" data-filter-control="true" data-show-search-clear-button="true">
-                                <tr>
-                                    <th id="Idproducto">ID Producto</th>
-                                    <th>Descripción</th>
-                                    <th>Disponible</th>
-                                    <th>Precio Unitario</th>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>a45789</td>
-                                    <td>Inoxidable</td>
-                                    <td>Disponible</td>
-                                    <td>150</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>b538</td>
-                                    <td>Corrugado</td>
-                                    <td>Disponible</td>
-                                    <td>50</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>j355</td>
-                                    <td>Laminado</td>
-                                    <td>Disponible</td>
-                                    <td>85</td>
-                                </tr>
-                                <tr>
-                                    <td>p23h</td>
-                                    <td>Aleacion</td>
-                                    <td>No Disponible</td>
-                                    <td>10044</td>
-                                </tr>
-                                <tr>
-                                    <td>f23522ff</td>
-                                    <td>Dulce</td>
-                                    <td>No Disponible</td>
-                                    <td>2324</td>
-                                </tr>
+                        <table id="myTable" style="width:95%" data-filter-control="true"
+                            data-show-search-clear-button="true">
+                            <tr>
+                                <th id="Idproducto">ID Producto</th>
+                                <th>Descripción</th>
+                                <th>Disponible</th>
+                                <th>Precio Unitario</th>
+
+                            </tr>
+                            <tr>
+                                <td>a45789</td>
+                                <td>Inoxidable</td>
+                                <td>Disponible</td>
+                                <td>150</td>
+
+                            </tr>
+                            <tr>
+                                <td>b538</td>
+                                <td>Corrugado</td>
+                                <td>Disponible</td>
+                                <td>50</td>
+
+                            </tr>
+                            <tr>
+                                <td>j355</td>
+                                <td>Laminado</td>
+                                <td>Disponible</td>
+                                <td>85</td>
+                            </tr>
+                            <tr>
+                                <td>p23h</td>
+                                <td>Aleacion</td>
+                                <td>No Disponible</td>
+                                <td>10044</td>
+                            </tr>
+                            <tr>
+                                <td>f23522ff</td>
+                                <td>Dulce</td>
+                                <td>No Disponible</td>
+                                <td>2324</td>
+                            </tr>
                         </table>
                     </aside>
 
                     <div class=boton ALIGN="center">
-                        <button type="submit" id="botonEditarUsuario" class="btn btn-danger" value="Submit" onsubmit=editarUsuario()>Editar Producto</button>
+                        <button type="submit" id="botonEditarProducto" class="btn btn-danger" value="Submit"
+                            onsubmit=editarProducto()>Editar Producto</button>
                     </div>
 
                 </div>
 
 
-                <!-- <div class="footer">
+                <div class="footer">
                     <img src="./images/logoTenJS.png" alt="Logo TenJS" />
                     <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
                 </div>
-            </div> -->
-    
+            </div>
 
-    <script>
+
+            <!-- <script>
         const targetDiv = document.getElementById("divInterfaz");
         const btn = document.getElementById("botonInterfaz");
         btn.onclick = function() {
@@ -189,99 +193,114 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                 targetDiv.style.display = "block";
             }
         };
-    </script>
+    </script> -->
 
 
 
-
-
-    <script>
-        let arrow = document.querySelectorAll(".arrow");
-        for (var i = 0; i < arrow.length; i++) {
-            arrow[i].addEventListener("click", (e) => {
-                let arrowParent = e.target.parentElement.parentElement;
-                arrowParent.classList.toggle("showMenu");
-            });
-        }
-        let sidebar = document.querySelector(".sidebar");
-        let sidebarBtn = document.querySelector(".bx-menu");
-        console.log(sidebarBtn);
-        sidebarBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("close");
-        });
-    </script>
-
-<script type="application/javascript">
-function tableSearch2() {
-        let input, filter, table, tr, td, txtValue;
-
-        input = document.getElementById("precio");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-
-        for (let i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[3];
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
+            <script>
+                let arrow = document.querySelectorAll(".arrow");
+                for (var i = 0; i < arrow.length; i++) {
+                    arrow[i].addEventListener("click", (e) => {
+                        let arrowParent = e.target.parentElement.parentElement;
+                        arrowParent.classList.toggle("showMenu");
+                    });
                 }
-            }
-        }
+                let sidebar = document.querySelector(".sidebar");
+                let sidebarBtn = document.querySelector(".bx-menu");
+                console.log(sidebarBtn);
+                sidebarBtn.addEventListener("click", () => {
+                    sidebar.classList.toggle("close");
+                });
+            </script>
 
-    }
-    function tableSearch1() {
-        let input, filter, table, tr, td, txtValue;
+            <script type="application/javascript">
+                function tableSearch2() {
+                    let input, filter, table, tr, td, txtValue;
 
-        input = document.getElementById("descripcion");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
+                    input = document.getElementById("precio");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
 
-        for (let i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[1];
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
+                    for (let i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[3];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+
                 }
-            }
-        }
+                function tableSearch1() {
+                    let input, filter, table, tr, td, txtValue;
 
-    }
+                    input = document.getElementById("descripcion");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
 
-    function tableSearch() {
-        let input, filter, table, tr, td, txtValue;
+                    for (let i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[1];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
 
-        input = document.getElementById("Idproducto");
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-
-        for (let i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    tr[i].style.display = "";
-                } else {
-                    tr[i].style.display = "none";
                 }
-            }
-        }
 
-    }
-    
-</script>
+                function tableSearch() {
+                    let input, filter, table, tr, td, txtValue;
 
-<script type="application/javascript">
-    
-</script>
+                    input = document.getElementById("Idproducto");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
+
+                    for (let i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[0];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+
+                }
+
+                function filterTable() {
+                    let dropdown, table, tr, td, estadoFiltro, filter;
+                    dropdown = document.getElementById("estadoProducto");
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
+                    filter = dropdown.value;
+
+                    for (let i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td");
+                        estadoFiltro = td[2] || null;
+
+                        if (filter === "All" || !estadoFiltro || (filter === estadoFiltro.textContent)) {
+                            tr[i].style.display = "";
+                        }
+                        else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+
+            </script>
+
 </body>
 
 </html>

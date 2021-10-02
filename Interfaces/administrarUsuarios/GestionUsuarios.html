@@ -107,10 +107,16 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
 
                     <div>
                         <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()">
-                            <label for="idVenta">ID Usuario: </label>
+                            <label for="idUsuario">ID Usuario: </label>
                             <input type="text" name="idUsuario" id="idUsuario" value="001">
 
-                            <label for="nombreUsuario">Nombre: </label>
+                            <label for="rolU">Rol de Usuario: </label>
+                            <select name="rolU" id="estadoU" onClick="getRol" size="1">
+                                <option value="administrador">Administrador</option>
+                                <option value="vendedor">Vendedor</option>
+                            </select>
+
+                            <label for="nombreUsuario">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Nombre: </label>
                             <input type="text" name="nombreUsuario" id="nombreUsuario" value="Nombre">
 
                             <label for="estadoU">Estado de Usuario: </label>
@@ -119,13 +125,13 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                                 <option value="autorizado">Autorizado</option>
                                 <option value="noautorizado">No Autorizado</option>
                             </select>
-                            <br><br>
-                            <aside ALIGN="center">
-                                <button type="button" onclick="buscarUsuario()">🔍 Buscar Usuario</button>
-                            </aside>
+
                         </form>
                     </div>
 
+                    <aside ALIGN="center">
+                        <button type="button" onclick="buscarUsuario()">🔍 Buscar Usuario</button>
+                    </aside>
                     <br><br>
                     <!-- <hr> -->
 
@@ -164,7 +170,8 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
 
                     <!-- <button type="reset" id="boton-vaciar" class="btn btn-danger">Vaciar Formulario</button> -->
                     <div class=boton ALIGN="center">
-                        <button type="submit" id="botonEditarUsuario" class="btn btn-danger" value="Submit" onsubmit=editarUsuario()>Editar Usuario</button>
+                        <button type="submit" id="botonEditarUsuario" class="btn btn-danger" value="Submit"
+                            onsubmit=editarUsuario()>Editar Usuario</button>
                     </div>
 
                 </div>
