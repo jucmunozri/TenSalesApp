@@ -29,8 +29,6 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Productos</a></li>
-                    <!-- <button id="botonInterfaz">Show/hide div Interfaz</button>
-                    <li><a href="#">Clientes</a></li> -->
                     <li><a href="../registroProductos/RegistroProductos.html">Agregar Productos</a></li>
                     <li><a href="../administrarProductos/GestionProductos.html">Gestión de Productos</a></li>
                 </ul>
@@ -47,7 +45,7 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                     <li><a class="link_name" href="#">Ventas</a></li>
                     <li><a href="../registroVentas/RegistroVentas.html">Nueva Venta</a></li>
                     <li><a href="../administrarVentas/GestionVentas.html">Gestión de Ventas</a></li>
-                    <!-- <li><a href="#">Estado de Ventas</a></li> -->
+                    <!-- <li><a href="#">x de Ventas</a></li> -->
                 </ul>
             </li>
             <li>
@@ -92,30 +90,94 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
         <div class="home-content">
             <i class="bx bx-menu"></i>
 
-            <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗ -->
-            <!-- ║  ║ ║ ║║║╣   ╚═╗ ║ ╠═╣╠╦╝ ║ ╚═╗ -->
-            <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝ -->
+
+            <div id="divInterfaz">
+                <!-- This is GESTIÓN DE Usuarios interface. -->
+                <div class="container">
+                    <div id="titulo">
+                        <h2 ALIGN="center">Buscar Producto</h2>
+                    </div>
+
+                    <div>
+                        <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()">
+                            <label for="Idproducto">🔍 ID Producto: </label>
+                            <input type="text" name="Idproducto" id="Idproducto" onkeyup='tableSearch()'>
+
+                            <label for="Descripción"> 🔍 Descripción: </label>
+                            <input type="text" name="Descripción" id="descripcion" onkeyup='tableSearch1()'>
+
+                            <label for="Precio"> 🔍 Precio: </label>
+                            <input type="text" name="Precio" id="precio" onkeyup='tableSearch2()'>
+                        </form>
+                    </div>
+                    <div>
+                        <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()" >
+                            <label for="estadoU">Filtrar por Estado: </label>
+                            <select name="estadoU" id="estadoU" onClick="getEstado" size="1">
+                                <option value="pendiente">Disponible</option>
+                                <option value="autorizado">No Disponible</option>
+                            </select>
+                        </form>
+                    </div>
 
 
-            <div id="divInterfaz">This is the interface div sample.
+                    <aside>
+                        <table id="myTable" style="width:95%" data-filter-control="true" data-show-search-clear-button="true">
+                                <tr>
+                                    <th id="Idproducto">ID Producto</th>
+                                    <th>Descripción</th>
+                                    <th>Disponible</th>
+                                    <th>Precio Unitario</th>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>a45789</td>
+                                    <td>Inoxidable</td>
+                                    <td>Disponible</td>
+                                    <td>150</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>b538</td>
+                                    <td>Corrugado</td>
+                                    <td>Disponible</td>
+                                    <td>50</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>j355</td>
+                                    <td>Laminado</td>
+                                    <td>Disponible</td>
+                                    <td>85</td>
+                                </tr>
+                                <tr>
+                                    <td>p23h</td>
+                                    <td>Aleacion</td>
+                                    <td>No Disponible</td>
+                                    <td>10044</td>
+                                </tr>
+                                <tr>
+                                    <td>f23522ff</td>
+                                    <td>Dulce</td>
+                                    <td>No Disponible</td>
+                                    <td>2324</td>
+                                </tr>
+                        </table>
+                    </aside>
+
+                    <div class=boton ALIGN="center">
+                        <button type="submit" id="botonEditarUsuario" class="btn btn-danger" value="Submit" onsubmit=editarUsuario()>Editar Producto</button>
+                    </div>
+
+                </div>
 
 
-            </div>
-
-            <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
-            <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
-            <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
-
-            <div class="footer">
-                <img src="./images/logoTenJS.png" alt="Logo TenJS" />
-                <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗ -->
-    <!-- ║  ║ ║ ║║║╣   ╚═╗ ║ ╠═╣╠╦╝ ║ ╚═╗ -->
-    <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝ -->
+                <!-- <div class="footer">
+                    <img src="./images/logoTenJS.png" alt="Logo TenJS" />
+                    <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div> -->
+    
 
     <script>
         const targetDiv = document.getElementById("divInterfaz");
@@ -129,9 +191,6 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
         };
     </script>
 
-    <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
-    <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
-    <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
 
 
 
@@ -151,6 +210,78 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
             sidebar.classList.toggle("close");
         });
     </script>
+
+<script type="application/javascript">
+function tableSearch2() {
+        let input, filter, table, tr, td, txtValue;
+
+        input = document.getElementById("precio");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (let i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[3];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+    }
+    function tableSearch1() {
+        let input, filter, table, tr, td, txtValue;
+
+        input = document.getElementById("descripcion");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (let i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[1];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+    }
+
+    function tableSearch() {
+        let input, filter, table, tr, td, txtValue;
+
+        input = document.getElementById("Idproducto");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (let i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+
+    }
+    
+</script>
+
+<script type="application/javascript">
+    
+</script>
 </body>
 
 </html>
