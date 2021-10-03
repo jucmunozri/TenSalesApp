@@ -1,0 +1,3 @@
+[submodule "tensalesapp-tenjs"]
+	path = tensalesapp-tenjs
+	url = https://github.com/juancarlosruizcarrillo/tensalesapp-tenjs
