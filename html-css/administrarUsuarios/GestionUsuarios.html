@@ -6,16 +6,17 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./styleRegVentas.css" />
+    <link rel="stylesheet" href="./styleGesUsuarios.css" />
     <!-- Boxiocns CDN Link -->
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Usuarios</title>
 </head>
 
 <body>
     <div class="sidebar close">
         <div class="logo-details">
-            <img src="images/TenSalesAppLogo.png" alt="Logo" />
+            <img src="../images/TenSalesAppLogo.png" alt="Logo" />
             <span class="logo_name">TenSalesApp</span>
         </div>
         <ul class="nav-links">
@@ -29,8 +30,8 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Productos</a></li>
-                    <!-- <button id="botonInterfaz">Show/hide div Interfaz</button>
-                    <li><a href="#">Clientes</a></li> -->
+                    <!-- <button id="botonInterfaz">Show/hide div Interfaz</button> -->
+                    <!-- <li><a href="#">Clientes</a></li> -->
                     <li><a href="../registroProductos/RegistroProductos.html">Agregar Productos</a></li>
                     <li><a href="../administrarProductos/GestionProductos.html">Gestión de Productos</a></li>
                 </ul>
@@ -60,7 +61,7 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Administración</a></li>
-                    <li><a href="/Interfaces/administrarUsuarios/GestionUsuarios.html">Gestión de Usuarios</a></li>
+                    <li><a href="../administrarUsuarios/GestionUsuarios.html">Gestión de Usuarios</a></li>
                     <!-- <li><a href="#">Usuarios</a></li> -->
                 </ul>
             </li>
@@ -77,13 +78,13 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
             <li>
                 <div class="profile-details">
                     <div class="profile-content">
-                        <img src="images/fotoperfil.png" alt="profileImg" />
+                        <img src="../images/fotoperfil.png" alt="profileImg" />
                     </div>
                     <div class="name-job">
                         <div class="profile_name">Guts</div>
                         <div class="job">Administrador</div>
                     </div>
-                    <a href="../../login.html"><i class="bx bx-log-out"></i></a>
+                    <i class="bx bx-log-out"></i>
                 </div>
             </li>
         </ul>
@@ -98,97 +99,80 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
 
 
             <div id="divInterfaz">
+                <!-- This is GESTIÓN DE Usuarios interface. -->
                 <div class="container">
-
                     <div id="titulo">
-                        <h2 ALIGN="center">Registro de ventas</h2>
+                        <h2 ALIGN="center">Buscar Usuario</h2>
                     </div>
 
                     <div>
                         <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()">
-                            <label for="idNuevaVenta">ID Venta: </label>
-                            <input type="text" name="idNuevaVenta" id="idNuevaVenta" value="001" readonly>
+                            <label for="idUsuario">ID Usuario: </label>
+                            <input type="text" name="idUsuario" id="idUsuario" value="001">
 
-                            <label for="cedulaNuevaVenta">Cédula: </label>
-                            <input type="text" name="cedulaNuevaVenta" id="cedulaNuevaVenta" value="1083894123"
-                                required>
-
-                            <label for="nombreClienteNuevaVenta">Nombre del Cliente: </label>
-                            <input type="text" name="nombreClienteNuevaVenta" id="nombreClienteNuevaVenta"
-                                value="Juan Carlos Ruiz" required>
-
-                            <label for="fechaVentaNuevaVenta">Fecha de Venta: </label>
-                            <input type="date" name="fechaVentaNuevaVenta" id="fechaVentaNuevaVenta" required>
-
-                            <br><br>
-
-                            <label for="fechaPagoNuevaVenta">Fecha de Pago: </label>
-                            <input type="date" name="fechaPagoNuevaVenta" id="fechaPagoNuevaVenta" required>
-
-                            <label for="vendedorNuevaVenta">Vendedor: </label>
-                            <select name="vendedorNuevaVenta" id="vendedorNuevaVenta" onClick="getVendedorName" size="1"
-                                required>
-                                <option value="vendedor1">Vendedor 1</option>
-                                <option value="vendedor2">Vendedor 2</option>
-                                <option value="vendedor3">Vendedor 3</option>
-
+                            <label for="rolU">Rol de Usuario: </label>
+                            <select name="rolU" id="estadoU" onClick="getRol" size="1">
+                                <option value="administrador">Administrador</option>
+                                <option value="vendedor">Vendedor</option>
                             </select>
+
+                            <label for="nombreUsuario">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Nombre: </label>
+                            <input type="text" name="nombreUsuario" id="nombreUsuario" value="Nombre">
+
+                            <label for="estadoU">Estado de Usuario: </label>
+                            <select name="estadoU" id="estadoU" onClick="getEstado" size="1">
+                                <option value="pendiente">Pendiente</option>
+                                <option value="autorizado">Autorizado</option>
+                                <option value="noautorizado">No Autorizado</option>
+                            </select>
+
                         </form>
                     </div>
+
+                    <aside ALIGN="center">
+                        <button type="button" onclick="buscarUsuario()">🔍 Buscar Usuario</button>
+                    </aside>
                     <br><br>
                     <!-- <hr> -->
+
                     <aside>
-                        <aside ALIGN="right">
-                            <button type="button" onclick="buscarProducto()">🔍 Buscar Producto</button>
-                        </aside>
                         <table style="width:95%">
                             <tr>
-                                <th>ID Producto</th>
-                                <th>Descripción</th>
-                                <th>Cantidad</th>
-                                <th>Precio Unitario</th>
-                                <th>Precio Total</th>
+                                <th>ID Usuario</th>
+                                <th>Nombre de Usuario</th>
+                                <th>Estado</th>
+                                <th>Rol</th>
+                                <th>Permisos</th>
                             </tr>
                             <tr>
-                                <td>ID Producto</td>
-                                <td>Descripción</td>
-                                <td>Cantidad</td>
-                                <td>Precio Unitario</td>
-                                <td>Precio Total</td>
+                                <td>ID Usuario</td>
+                                <td>Nombre de Usuario</td>
+                                <td>Estado</td>
+                                <td>Rol</td>
+                                <td>Permisos</td>
                             </tr>
                             <tr>
-                                <td>ID Producto</td>
-                                <td>Descripción</td>
-                                <td>Cantidad</td>
-                                <td>Precio Unitario</td>
-                                <td>Precio Total</td>
+                                <td>ID Usuario</td>
+                                <td>Nombre de Usuario</td>
+                                <td>Estado</td>
+                                <td>Rol</td>
+                                <td>Permisos</td>
                             </tr>
                             <tr>
-                                <td>ID Producto</td>
-                                <td>Descripción</td>
-                                <td>Cantidad</td>
-                                <td>Precio Unitario</td>
-                                <td>Precio Total</td>
+                                <td>ID Usuario</td>
+                                <td>Nombre de Usuario</td>
+                                <td>Estado</td>
+                                <td>Rol</td>
+                                <td>Permisos</td>
                             </tr>
                         </table>
-
-
-                        <div class="VentaTotal" ALIGN="center">
-                            <p class="textoValorVenta"> Valor Total: <span id="totalVenta"></span>&dollar;</p>
-                        </div>
                     </aside>
 
-                    <br><br>
+                    <!-- <button type="reset" id="boton-vaciar" class="btn btn-danger">Vaciar Formulario</button> -->
                     <div class=boton ALIGN="center">
-                        <button type="reset" id="boton-vaciar" class="btn btn-danger">Vaciar Formulario</button>
-                        <button type="submit" id="botonConfirmarNuevaVenta" class="btn btn-danger" value="Submit"
-                            onsubmit=confirmarNuevaVenta()> Confirmar Venta</button>
+                        <button type="submit" id="botonEditarUsuario" class="btn btn-danger" value="Submit"
+                            onsubmit=editarUsuario()>Editar Usuario</button>
                     </div>
-                    <!-- <label for="botonConfirmarNuevaVenta">Confirmar Venta</label>
-                        <input type="submit" id="botonConfirmarNuevaVenta" class="submit" value="Submit" onsubmit=confirmarNuevaVenta()> -->
-                    <!-- <div class="ConfirmarVenta" ALIGN="center"> -->
-
-                    <!-- </div> -->
 
                 </div>
 
@@ -196,42 +180,34 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                 <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
                 <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
 
-                <div class="footer">
-                    <img src="./images/logoTenJS.png" alt="Logo TenJS" />
-                    <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
-                </div>
             </div>
-    </section>
+
+            <div class="footer">
+                <img src="../images/logoTenJS.png" alt="Logo TenJS" />
+                <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
+            </div>
+
+        </section>
 
     <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╦╗╔═╗╦═╗╔╦╗╔═╗ -->
     <!-- ║  ║ ║ ║║║╣   ╚═╗ ║ ╠═╣╠╦╝ ║ ╚═╗ -->
     <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝ ╩ ╩ ╩╩╚═ ╩ ╚═╝ -->
 
-    <script>
-        // code to hide/show the whole div 
+    <!-- <script>
         const targetDiv = document.getElementById("divInterfaz");
         const btn = document.getElementById("botonInterfaz");
-        btn.onclick = function () {
+        btn.onclick = function() {
             if (targetDiv.style.display !== "none") {
                 targetDiv.style.display = "none";
             } else {
                 targetDiv.style.display = "block";
             }
         };
-
-        // code to verify all inputs are filled and saved on the database(?)
-
-        function alert_confirmation() {
-            window.alert("¡Nueva Venta Registrada Exitosamente!");
-            return true; // submit the form
-            return false; // don't submit the form
-        }
-    </script>
+    </script> --->
 
     <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
     <!-- ║  ║ ║ ║║║╣   ║╣ ║║║ ║║╚═╗ -->
     <!-- ╚═╝╚═╝═╩╝╚═╝  ╚═╝╝╚╝═╩╝╚═╝ -->
-
 
     <script>
         let arrow = document.querySelectorAll(".arrow");
