@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!-- Inspirado en CodingLab y VidaMRR
+CodingLab -> https://www.youtube.com/watch?v=ES8vJcUqE7s
+Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styleGesProd.css" />
+    <!-- Boxiocns CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <img src="../images/TenSalesAppLogo.png" alt="Logo" />
+            <span class="logo_name">TenSalesApp</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="bx bxs-business"></i>
+                        <span class="link_name">Productos</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Productos</a></li>
+                    <li><a href="../registroProductos/RegistroProductos.html">Agregar Productos</a></li>
+                    <li><a href="../administrarProductos/GestionProductos.html">Gestión de Productos</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="bx bx-shopping-bag"></i>
+                        <span class="link_name">Ventas</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Ventas</a></li>
+                    <li><a href="../registroVentas/RegistroVentas.html">Nueva Venta</a></li>
+                    <li><a href="../administrarVentas/GestionVentas.html">Gestión de Ventas</a></li>
+                    <!-- <li><a href="#">x de Ventas</a></li> -->
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="bx bx-lock-alt"></i>
+                        <span class="link_name">Administración</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Administración</a></li>
+                    <li><a href="../administrarUsuarios/GestionUsuarios.html">Gestión de Usuarios</a></li>
+                    <!-- <li><a href="#">Usuarios</a></li> -->
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="link_name">Configuración</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Configuración</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="../images/fotoperfil.png" alt="profileImg" />
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Guts</div>
+                        <div class="job">Administrador</div>
+                    </div>
+                    <i class="bx bx-log-out"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class="bx bx-menu"></i>
+
+
+            <div id="divInterfaz">
+                <!-- This is GESTIÓN DE Usuarios interface. -->
+                <div class="container">
+                    <div id="titulo">
+                        <h2 ALIGN="center">Buscar Producto</h2>
+                    </div>
+
+                    <div>
+                        <form ALIGN="center" action="" id="form-id" class="form" onsubmit="return alert_confirmation()">
+                            <label for="Idproducto">ID Producto: </label>
+                            <input type="text" name="Idproducto" id="Idproducto" onkeyup='tableSearch()'>
+
+                            <label for="Descripción">Descripción: </label>
+                            <input type="text" name="Descripción" id="descripcion" onkeyup='tableSearch1()'>
+
+                            <label for="Precio">Precio: </label>
+                            <input type="text" name="Precio" id="precio" onkeyup='tableSearch2()'>
+
+                            <label for="estadoProducto">Estado: </label>
+                            <select id="estadoProducto" oninput="filterTable()">
+                                <option>Todos</option>
+                                <option>Disponible</option>
+                                <option>No Disponible</option>
+                            </select>
+                    </div>
+
+                    <aside ALIGN="center">
+                        <button type="button" onclick="buscarProducto()">🔍 Buscar Poducto</button>
+                    </aside>
+
+                    <br><br>
+                    <aside>
+                        <table id="myTable" style="width:95%" data-filter-control="true"
+                            data-show-search-clear-button="true">
+                            <tr>
+                                <th id="Idproducto">ID Producto</th>
+                                <th>Descripción</th>
+                                <th>Disponible</th>
+                                <th>Precio Unitario</th>
+
+                            </tr>
+                            <tr>
+                                <td>a45789</td>
+                                <td>Inoxidable</td>
+                                <td>Disponible</td>
+                                <td>150</td>
+
+                            </tr>
+                            <tr>
+                                <td>b538</td>
+                                <td>Corrugado</td>
+                                <td>Disponible</td>
+                                <td>50</td>
+
+                            </tr>
+                            <tr>
+                                <td>j355</td>
+                                <td>Laminado</td>
+                                <td>Disponible</td>
+                                <td>85</td>
+                            </tr>
+                            <tr>
+                                <td>p23h</td>
+                                <td>Aleacion</td>
+                                <td>No Disponible</td>
+                                <td>10044</td>
+                            </tr>
+                            <tr>
+                                <td>f23522ff</td>
+                                <td>Dulce</td>
+                                <td>No Disponible</td>
+                                <td>2324</td>
+                            </tr>
+                        </table>
+                    </aside>
+
+                    <div class=boton ALIGN="center">
+                        <button type="submit" id="botonEditarProducto" class="btn btn-danger" value="Submit"
+                            onsubmit=editarProducto()>Editar Producto</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer">
+                <img src="../images/logoTenJS.png" alt="Logo TenJS" />
+                <p>© 2021 TenJS. ALL RIGHTS RESERVED.</p>
+            </div>
+
+            <!-- <script>
+        const targetDiv = document.getElementById("divInterfaz");
+        const btn = document.getElementById("botonInterfaz");
+        btn.onclick = function() {
+            if (targetDiv.style.display !== "none") {
+                targetDiv.style.display = "none";
+            } else {
+                targetDiv.style.display = "block";
+            }
+        };
+    </script> -->
+
+
+
+            <script>
+                let arrow = document.querySelectorAll(".arrow");
+                for (var i = 0; i < arrow.length; i++) {
+                    arrow[i].addEventListener("click", (e) => {
+                        let arrowParent = e.target.parentElement.parentElement;
+                        arrowParent.classList.toggle("showMenu");
+                    });
+                }
+                let sidebar = document.querySelector(".sidebar");
+                let sidebarBtn = document.querySelector(".bx-menu");
+                console.log(sidebarBtn);
+                sidebarBtn.addEventListener("click", () => {
+                    sidebar.classList.toggle("close");
+                });
+            </script>
+
+            <script type="application/javascript">
+                function tableSearch2() {
+                    let input, filter, table, tr, td, txtValue;
+
+                    input = document.getElementById("precio");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
+
+                    for (let i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[3];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+
+                }
+                function tableSearch1() {
+                    let input, filter, table, tr, td, txtValue;
+
+                    input = document.getElementById("descripcion");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
+
+                    for (let i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[1];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+
+                }
+
+                function tableSearch() {
+                    let input, filter, table, tr, td, txtValue;
+
+                    input = document.getElementById("Idproducto");
+                    filter = input.value.toUpperCase();
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
+
+                    for (let i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[0];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                            } else {
+                                tr[i].style.display = "none";
+                            }
+                        }
+                    }
+
+                }
+
+                function filterTable() {
+                    let dropdown, table, tr, td, estadoFiltro, filter;
+                    dropdown = document.getElementById("estadoProducto");
+                    table = document.getElementById("myTable");
+                    tr = table.getElementsByTagName("tr");
+                    filter = dropdown.value;
+
+                    for (let i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td");
+                        estadoFiltro = td[2] || null;
+
+                        if (filter === "Todos" || !estadoFiltro || (filter === estadoFiltro.textContent)) {
+                            tr[i].style.display = "";
+                        }
+                        else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+
+            </script>
+
+</body>
+
+</html>
