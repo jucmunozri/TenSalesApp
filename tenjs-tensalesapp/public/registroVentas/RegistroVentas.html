@@ -110,12 +110,12 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                             <input type="text" name="idNuevaVenta" id="idNuevaVenta" value="001" readonly>
 
                             <label for="cedulaNuevaVenta">Cédula: </label>
-                            <input type="text" name="cedulaNuevaVenta" id="cedulaNuevaVenta" value="1083894123"
+                            <input type="text" name="cedulaNuevaVenta" id="cedulaNuevaVenta" value=""
                                 required>
 
                             <label for="nombreClienteNuevaVenta">Nombre del Cliente: </label>
                             <input type="text" name="nombreClienteNuevaVenta" id="nombreClienteNuevaVenta"
-                                value="Juan Carlos Ruiz" required>
+                                value="" required>
 
                             <label for="fechaVentaNuevaVenta">Fecha de Venta: </label>
                             <input type="date" name="fechaVentaNuevaVenta" id="fechaVentaNuevaVenta" required>
@@ -133,63 +133,65 @@ Vida MRR -> https://www.youtube.com/watch?v=sRaVhp96jxM -->
                                 <option value="vendedor3">Vendedor 3</option>
 
                             </select>
+
+                            <br><br><br><br>
+                            <!-- <hr> -->
+                            <aside>
+                                <aside ALIGN="right">
+                                    <button type="button" onclick="buscarProducto()">🔍 Buscar Producto</button>
+                                </aside>
+                                <table style="width:95%">
+                                    <tr>
+                                        <th>ID Producto</th>
+                                        <th>Descripción</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio Unitario</th>
+                                        <th>Precio Total</th>
+                                    </tr>
+                                    <tr>
+                                        <td>ID Producto</td>
+                                        <td>Descripción</td>
+                                        <td>Cantidad</td>
+                                        <td>Precio Unitario</td>
+                                        <td>Precio Total</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ID Producto</td>
+                                        <td>Descripción</td>
+                                        <td>Cantidad</td>
+                                        <td>Precio Unitario</td>
+                                        <td>Precio Total</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ID Producto</td>
+                                        <td>Descripción</td>
+                                        <td>Cantidad</td>
+                                        <td>Precio Unitario</td>
+                                        <td>Precio Total</td>
+                                    </tr>
+                                </table>
+
+
+                                <div class="VentaTotal" ALIGN="center">
+                                    <p class="textoValorVenta"> Valor Total: <span id="totalVenta"></span>&dollar;</p>
+                                </div>
+                            </aside>
+
+                            <br><br>
+                            <div class=boton ALIGN="center">
+                                <button type="reset" id="boton-vaciar" class="btn btn-danger">Vaciar Formulario</button>
+                                <button type="submit" id="botonConfirmarNuevaVenta" class="btn btn-danger" value="Submit"
+                                    onsubmit=confirmarNuevaVenta()> Confirmar Venta</button>
+                                    <!-- Este button_onsubmit no está en uso since the form_onsubmit is calling the function alert_confirmation() -->
+                            </div>
+                            <!-- <label for="botonConfirmarNuevaVenta">Confirmar Venta</label>
+                                <input type="submit" id="botonConfirmarNuevaVenta" class="submit" value="Submit" onsubmit=confirmarNuevaVenta()> -->
+                            <!-- <div class="ConfirmarVenta" ALIGN="center"> -->
+
+                            <!-- </div> -->
+
                         </form>
                     </div>
-                    <br><br>
-                    <!-- <hr> -->
-                    <aside>
-                        <aside ALIGN="right">
-                            <button type="button" onclick="buscarProducto()">🔍 Buscar Producto</button>
-                        </aside>
-                        <table style="width:95%">
-                            <tr>
-                                <th>ID Producto</th>
-                                <th>Descripción</th>
-                                <th>Cantidad</th>
-                                <th>Precio Unitario</th>
-                                <th>Precio Total</th>
-                            </tr>
-                            <tr>
-                                <td>ID Producto</td>
-                                <td>Descripción</td>
-                                <td>Cantidad</td>
-                                <td>Precio Unitario</td>
-                                <td>Precio Total</td>
-                            </tr>
-                            <tr>
-                                <td>ID Producto</td>
-                                <td>Descripción</td>
-                                <td>Cantidad</td>
-                                <td>Precio Unitario</td>
-                                <td>Precio Total</td>
-                            </tr>
-                            <tr>
-                                <td>ID Producto</td>
-                                <td>Descripción</td>
-                                <td>Cantidad</td>
-                                <td>Precio Unitario</td>
-                                <td>Precio Total</td>
-                            </tr>
-                        </table>
-
-
-                        <div class="VentaTotal" ALIGN="center">
-                            <p class="textoValorVenta"> Valor Total: <span id="totalVenta"></span>&dollar;</p>
-                        </div>
-                    </aside>
-
-                    <br><br>
-                    <div class=boton ALIGN="center">
-                        <button type="reset" id="boton-vaciar" class="btn btn-danger">Vaciar Formulario</button>
-                        <button type="submit" id="botonConfirmarNuevaVenta" class="btn btn-danger" value="Submit"
-                            onsubmit=confirmarNuevaVenta()> Confirmar Venta</button>
-                    </div>
-                    <!-- <label for="botonConfirmarNuevaVenta">Confirmar Venta</label>
-                        <input type="submit" id="botonConfirmarNuevaVenta" class="submit" value="Submit" onsubmit=confirmarNuevaVenta()> -->
-                    <!-- <div class="ConfirmarVenta" ALIGN="center"> -->
-
-                    <!-- </div> -->
-
                 </div>
 
                 <!-- ╔═╗╔═╗╔╦╗╔═╗  ╔═╗╔╗╔╔╦╗╔═╗ -->
