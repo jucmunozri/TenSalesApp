@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./stylesLogin.css">
+
+    <title>Inicio de Sesión</title>
+    <meta name="google-signin-client_id" content="735534315390-5r42me0ec687soo6hiu2a15m05ns0djr.apps.googleusercontent.com">
+</head>
+
+<body class="body">
+    <div class="container">
+        <div class="login-container">
+
+            <div class="register">
+                <h2>Registrarse</h2>
+                <form action="">
+                    <input type="text" placeholder="👤Nombre" class="nombre" required>
+                    <input type="text" placeholder="✉️ Correo" class="correo" required>
+                    <input type="password" placeholder="🔒 Contraseña" class="pass" required>
+                    <input type="password" placeholder="🔒 Confirma la contraseña" class="repass" required>
+                    <input type="submit" class="submit" value="REGISTRARSE">
+                </form>
+            </div>
+
+
+            <div class="login">
+                <div>
+                    <img id="logoApp" ALIGN="middle" src="../images/TenSalesLogo.png" alt="TenSalesApp logo" />
+                </div>
+                <h2>Inicio de Sesión</h2>
+                <form action="">
+                    <input type="email" placeholder="✉️ Ingrese su Correo" class="correo" required>
+                    <input type="password" placeholder="🔒 Ingrese su Contraseña" class="pass" required>
+                    <input type="submit" class="submit" value="Iniciar Sesión">
+                    <br>
+                    <a href="./passwordRecovery.html">¿Olvidó la contraseña?</a>
+
+                    <!-- CODE BOTON GOOGLE  -->
+                    <h3>--------------- O ---------------</h3>
+
+                    <!-- first option for Google button nehh by Jk -->
+                    <!-- <div class="g-signin2" data-onsuccess="onSignIn" ALIGN="middle"></div>
+                    <br> -->
+
+                    <!-- second option for Google button -->
+
+                    <div id="my-signin2" ALIGN="middle"></div>
+                    <script>
+                        function onSuccess(googleUser) {
+                            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                        }
+
+                        function onFailure(error) {
+                            console.log(error);
+                        }
+
+                        function renderButton() {
+                            gapi.signin2.render('my-signin2', {
+                                'scope': 'profile email',
+                                'width': 240,
+                                'height': 50,
+                                'longtitle': true,
+                                'theme': 'dark',
+                                'onsuccess': onSuccess,
+                                'onfailure': onFailure
+                            });
+                        }
+                    </script>
+
+                    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+                    <!-- CODE BOTON GOOGLE  -->
+
+
+                    <!-- button to test interfaces -->
+                    <div ALIGN="middle">
+                        <a href="./SidebarSample.html">✅</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img class="logo10js" src="../images/logoTenJS.png" alt="Logo TenJS" />
+        <p id="footer_p" ALIGN="middle">© 2021 TenJS. ALL RIGHTS RESERVED.</p>
+    </div>
+
+</body>
+
+</html>
