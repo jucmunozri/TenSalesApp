@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/interfaces.css";
 
-const RegistroVenta = () => {
+const RegistrarVenta = () => {
   return (
     <div id="divInterfaz">
       <div className="containers">
@@ -158,4 +158,4 @@ const RegistroVenta = () => {
   );
 };
 
-export default RegistroVenta;
+export default RegistrarVenta;

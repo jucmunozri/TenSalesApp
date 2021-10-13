@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
 
 // RESOLVER ESTE IMPORT
-import RegistroVenta from "./components/pages/RegistroVenta";
+import RegistrarVenta from "./components/pages/RegistrarVenta";
 import GestionVentas from "./components/pages/GestionVentas";
 import GestionProductos from "./components/pages/GestionProductos";
 import RegistrarProducto from "./components/pages/RegistrarProducto";
@@ -57,8 +57,8 @@ function App() {
             <Route exact path={"/Productos/GestionProductos"}>
               <GestionProductos />
             </Route>
-            <Route exact path={"/Ventas/RegistroVenta"}>
-              <RegistroVenta />
+            <Route exact path={"/Ventas/RegistrarVenta"}>
+              <RegistrarVenta />
             </Route>
             <Route exact path={"/Ventas/GestionVentas"}>
               <GestionVentas />

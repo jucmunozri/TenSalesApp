@@ -36,7 +36,7 @@ export const menuItems = [
     to: `/Ventas`,
     iconClassName: "bi bi-speedometer2",
     subMenus: [
-      { name: "Registrar Venta", to: "/Ventas/RegistroVenta" },
+      { name: "Registrar Venta", to: "/Ventas/RegistrarVenta" },
       { name: "Gestion de Ventas", to: "/Ventas/GestionVentas" },
     ],
   },
