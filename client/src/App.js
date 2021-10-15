@@ -3,6 +3,7 @@ import SideMenu, { menuItems } from "./components/SideMenu";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useState } from "react";
+import Axios from "axios";
 
 // RESOLVER ESTE IMPORT
 import RegistrarVenta from "./components/pages/RegistrarVenta";

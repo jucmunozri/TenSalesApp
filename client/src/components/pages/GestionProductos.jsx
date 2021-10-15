@@ -1,7 +1,16 @@
 import React from "react";
 import "../styles/interfaces.css";
+//import { useState } from "react";
+
 
 const GestionProductos = () => {
+  // const [name,setName] = useState("");
+  // const [description,setDescription] = useState("");
+  // const [price,setPrice] = useState("");
+  // const [status,setStatus] = useState("");
+
+
+
   return (
     <div id="divInterfaz">
       {/* <!-- This is GESTIÓN DE Productos interface. --> */}
@@ -18,7 +27,7 @@ const GestionProductos = () => {
             className="form"
             onSubmit="return alert_confirmation()"
           >
-            <label for="Idproducto">ID Producto: </label>
+            <label for="Idproducto">Nombre Producto: </label>
             <input
               type="text"
               name="Idproducto"

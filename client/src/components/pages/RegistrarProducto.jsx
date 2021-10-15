@@ -1,7 +1,29 @@
 import React from "react";
 import "../styles/interfaces.css";
+import { useState } from "react";
+import Axios from "axios";
 
-const RegistroProducto = () => {
+const RegistrarProducto = () => {
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState(0);
+  const [status, setStatus] = useState("");
+
+  const addProduct = () => {
+    Axios.post("http://localhost:3001/createProduct", {
+      name: name,
+      description: description,
+      price: price,
+      status: status,
+    }).then(() => {
+      alert("Producto añadido exitosamente");
+    });
+  };
+
+  const displayInfo = () => {
+    console.log(name + description + price + status);
+  };
+
   return (
     <div id="divInterfaz">
       <div className="containers">
@@ -10,20 +32,12 @@ const RegistroProducto = () => {
         </div>
 
         <div>
-          <form
-            ALIGN="center"
-            action=""
-            id="form-id"
-            className="form"
-            onSubmit="return alert_confirmation()"
-          >
-            <span className="input-group-text" id="basic-addon1">
+            <label className="input-group-text" id="basic-addon1">
               Tipo de producto
-            </span>
+            </label>
             <select
               className="form-select"
               aria-label="Default select example"
-              required
             >
               <option selected>Tipo de Producto</option>
               <option value="1">Prod1</option>
@@ -31,16 +45,12 @@ const RegistroProducto = () => {
               <option value="3">Prod3</option>
             </select>
 
-            <span className="input-group-text" id="basic-addon1">
-              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; ID
-            </span>
+            <label>Nombre</label>
             <input
               type="text"
-              className="form-control"
-              placeholder=""
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-              required
+              onChange={(event) => {
+                setName(event.target.value);
+              }}
             />
             <br />
 
@@ -49,23 +59,19 @@ const RegistroProducto = () => {
             </span>
             <input
               type="text"
-              className="form-control"
-              placeholder=""
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-              required
+              onChange={(event) => {
+                setDescription(event.target.value);
+              }}
             />
 
             <span className="input-group-text" id="basic-addon1">
               Precio
             </span>
             <input
-              type="text"
-              className="form-control"
-              placeholder=""
-              aria-label="Username"
-              aria-describedby="basic-addon1"
-              required
+              type="number"
+              onChange={(event) => {
+                setPrice(event.target.value);
+              }}
             />
 
             <span className="input-group-text" id="basic-addon1">
@@ -74,7 +80,9 @@ const RegistroProducto = () => {
             <select
               className="form-select"
               aria-label="Default select example"
-              required
+              onChange={(event) => {
+                setStatus(event.target.value);
+              }}
             >
               <option selected>Estado</option>
               <option value="1">Disponible</option>
@@ -91,7 +99,7 @@ const RegistroProducto = () => {
             <br />
             <br />
 
-            <aside>
+            {/* <aside>
               <table
               // style="width:95%"
               >
@@ -124,31 +132,30 @@ const RegistroProducto = () => {
                   <td>Precio Unitario</td>
                 </tr>
               </table>
-            </aside>
+            </aside> */}
 
             <div
               // className={boton}
               ALIGN="center"
             >
-              <button type="reset" id="botonVaciar" className="btn btn-ttc">
+              {/* <button type="reset" id="botonVaciar" className="btn btn-ttc">
                 Vaciar Formulario
-              </button>
+              </button> */}
 
               <button
-                type="submit"
-                id="botonGuardar"
-                className="btn btn-ttc"
-                value="Submit"
-                // onSubmit=Guardar()
+                // type="submit"
+                // id="botonGuardar"
+                //className="btn btn-ttc"
+                // value="Submit"
+                onClick={addProduct}
               >
                 Guardar
               </button>
             </div>
-          </form>
         </div>
       </div>
     </div>
   );
 };
 
-export default RegistroProducto;
+export default RegistrarProducto;
