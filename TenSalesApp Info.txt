@@ -54,4 +54,26 @@ Product Owner: Juan Carlos Ruiz
 Administrador de BD: Julio Cesar Muñoz
 Scrum Master: Carolina Garzon
 
+- Sprint 2:
 
+Desarrollador: Julio Muñoz.
+Analista: Andrey Solano.
+Product Owner: Carolina Garzón.
+Administrador de BD: Juan Manuel Garzón.
+Scrum Master: Juan Carlos Ruiz.
+
+- Sprint 3:
+
+Desarrollador: Andrey Solano
+Analista: Juan Carlos Ruiz
+Product Owner: Julio Muñoz
+Administrador de BD: Julio Muñoz & Carolina Garzón.
+Scrum Master: Carolina Garzón
+
+- Sprint 4: 
+
+Desarrollador: Carolina Garzón.
+Analista: Andrey Solano.
+Product Owner: Juan Carlos Ruiz.
+Administrador de BD: Julio Muñoz & Carolina Garzón.
+Scrum Master: Julio Muñoz.
