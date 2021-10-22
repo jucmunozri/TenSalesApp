@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-//const axios = require('axios');
+const axios = require('axios');
 
 
 // Importar controladores
@@ -21,7 +21,7 @@ const SalesControllers = require('./controllers/SalesControllers');
  router.post('/create', UsersControllers.create);
  router.get('/show', UsersControllers.showAll);
  router.get('/showVendedores', UsersControllers.showSellers);
- router.patch('/update', UsersControllers.update);
+ //router.patch('/update', UsersControllers.update);
  router.delete('/delete/:id', UsersControllers.delete);
  
 
@@ -36,10 +36,6 @@ const SalesControllers = require('./controllers/SalesControllers');
  //DetallesVentas
  router.post('/createDetallesVenta', SalesControllers.createDV);
  router.get('/showDetallesVenta', SalesControllers.showSale);
- 
- 
-
-
 
 
  /*router.get('/test/test', (req, res)=>{ 
