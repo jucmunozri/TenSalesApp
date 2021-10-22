@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       valorTotal: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        defaultValue: 0,
       },
 
       estado: {
