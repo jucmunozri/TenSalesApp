@@ -1,3 +1,4 @@
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Productos = sequelize.define(
     "Productos",
@@ -11,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+
       precio: {
         type: DataTypes.INTEGER,
         allowNull: false,

@@ -1,25 +1,35 @@
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Usuarios = sequelize.define(
     "Usuarios",
     {
-      // id: {
-      //   type: DataTypes.STRING,
-      //   allowNull: false,
-      // },
 
       rol: {
         type: DataTypes.STRING,
         allowNull: false,
+        defaultValue: "Vendedor"
       },
+
       nombre: {
         type: DataTypes.STRING,
         allowNull: false,
       },
 
-      estado: {
+      /*estado: {
         type: DataTypes.STRING,
         allowNull: false,
+      },*/
+
+      correo: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
       },
+
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      }
     },
     { timestamps: false }
   );

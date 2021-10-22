@@ -1,49 +1,50 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Ventas = sequelize.define(
+  const Detalles = sequelize.define(
     "Ventas",
     {
-      cedula: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-
-      cliente: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-
-      vendedor: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-
-      fechaVenta: {
-        type: DataTypes.DATE,
-        allowNull: false,
-      },
-
-      valorTotal: {
+      idProducto: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
 
-      estado: {
+      idVenta: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+
+      descripcion: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: "Pendiente"
       },
+
+      cantidad: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+
+      precioUnitario: {
+          type: DataTypes.INTEGER,
+          allowNull: false,
+      },
+
+      precioTotal: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+
     },
+    
     { timestamps: false }
   );
 
-  Ventas.associate = (models) => {
+  /*Detalles.associate = (models) => {
     Ventas.belongsToMany(models.Productos, {
       through: "infoVenta",
       timestamps: false,
       foreignkey: { name: "id", allowNull: false },
     });
-  };
+  };*/
 
-  return Ventas;
+  return Detalles;
 };

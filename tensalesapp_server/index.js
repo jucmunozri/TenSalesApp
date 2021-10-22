@@ -21,6 +21,7 @@ const bd = mysql.createConnection({
   database: "tensalesappjk",
 });
 
+// CREATE USUARIOS (listo)
 app.post("/create", (req, res) => {
   const rol = req.body.rol;
   const nombre = req.body.nombre;
@@ -39,7 +40,7 @@ app.post("/create", (req, res) => {
   );
 });
 
-// CREATE PRODUCTOS
+// CREATE PRODUCTOS (listo)
 app.post("/createProducto", (req, res) => {
   const descripcion = req.body.descripcion;
   const precio = req.body.precio;
@@ -58,6 +59,7 @@ app.post("/createProducto", (req, res) => {
   );
 });
 
+//SHOW USUARIOS (listo)
 app.get("/show", (req, res) => {
   bd.query("SELECT * FROM usuarios", (err, result) => {
     if (err) {
@@ -67,7 +69,8 @@ app.get("/show", (req, res) => {
     }
   });
 });
-// SHOW PRODUCTO
+
+// SHOW PRODUCTO (listo)
 app.get("/showProducto", (req, res) => {
   bd.query("SELECT * FROM productos", (err, result) => {
     if (err) {
@@ -78,7 +81,7 @@ app.get("/showProducto", (req, res) => {
   });
 });
 
-// SHOW PRODUCTO descripcion
+// SHOW PRODUCTO descripcion (listo)
 app.get("/showProductoDescripcion", (req, res) => {
   bd.query("SELECT id, descripcion FROM productos", (err, result) => {
     if (err) {
@@ -89,7 +92,7 @@ app.get("/showProductoDescripcion", (req, res) => {
   });
 });
 
-// SHOW VENDEDORES
+// SHOW VENTA (listo)
 app.get("/showIdVenta", (req, res) => {
   bd.query("SELECT id FROM ventas", (err, result) => {
     if (err) {
@@ -100,7 +103,7 @@ app.get("/showIdVenta", (req, res) => {
   });
 });
 
-// SHOW VENDEDORES
+// SHOW VENDEDORES (listo)
 app.get("/showVendedores", (req, res) => {
   bd.query("SELECT id, rol, nombre FROM usuarios", (err, result) => {
     if (err) {
@@ -111,6 +114,7 @@ app.get("/showVendedores", (req, res) => {
   });
 });
 
+//UPDATE USUARIOS
 app.put("/update", (req, res) => {
   const id = req.body.id;
   const rol = req.body.rol;
@@ -130,7 +134,7 @@ app.put("/update", (req, res) => {
   );
 });
 
-//UPDATE PRODUCTOS
+//UPDATE PRODUCTOS (listo)
 app.put("/updateProducto", (req, res) => {
   const id = req.body.id;
   const descripcion = req.body.descripcion;
@@ -150,6 +154,7 @@ app.put("/updateProducto", (req, res) => {
   );
 });
 
+//DELETE USUARIOS (listo)
 app.delete("/delete/:id", (req, res) => {
   const id = req.params.id;
   bd.query("DELETE FROM usuarios WHERE id = ?", id, (err, result) => {
@@ -161,7 +166,7 @@ app.delete("/delete/:id", (req, res) => {
   });
 });
 
-//DELETE PRODUCTOS
+//DELETE PRODUCTOS (listo)
 app.delete("/deleteProducto/:id", (req, res) => {
   const id = req.params.id;
   bd.query("DELETE FROM productos WHERE id = ?", id, (err, result) => {
